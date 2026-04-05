@@ -1,0 +1,388 @@
+/* ===================================
+   CUSTOMIZATION GUIDE & VARIABLES
+   ===================================
+   
+   This file contains all the easy-to-edit variables and settings.
+   Copy values from here to customize your portfolio quickly!
+*/
+
+/* ===================================
+   COLOR SCHEME
+   ===================================
+   Main colors used throughout the site.
+   Change these in style.css (root variables)
+*/
+
+/*
+--bg-dark: #0B0B0D;              // Main background
+--bg-darker: #060608;            // Darker background
+--orange-primary: #FF7A00;       // Primary accent (brand color)
+--orange-glow: rgba(255, 122, 0, 0.4);  // Glow effect
+--orange-light: #FF9433;         // Light accent
+--text-primary: #FFFFFF;         // Main text color
+--text-secondary: #B4B4B8;       // Secondary text
+--text-muted: #6B6B70;          // Muted/subtle text
+--border-color: rgba(255, 255, 255, 0.1);  // Border color
+*/
+
+/* Alternative Color Schemes */
+
+/* Blue Theme */
+/*
+--orange-primary: #00A3FF;
+--orange-glow: rgba(0, 163, 255, 0.4);
+--orange-light: #33B5FF;
+*/
+
+/* Purple Theme */
+/*
+--orange-primary: #8B5CF6;
+--orange-glow: rgba(139, 92, 246, 0.4);
+--orange-light: #A78BFA;
+*/
+
+/* Green Theme */
+/*
+--orange-primary: #10B981;
+--orange-glow: rgba(16, 185, 129, 0.4);
+--orange-light: #34D399;
+*/
+
+/* Red Theme */
+/*
+--orange-primary: #EF4444;
+--orange-glow: rgba(239, 68, 68, 0.4);
+--orange-light: #F87171;
+*/
+
+/* ===================================
+   TYPOGRAPHY
+   ===================================
+   Font settings for your portfolio
+*/
+
+/*
+--font-primary: 'Inter', sans-serif;     // Main font
+
+Alternative fonts (update in HTML <link> tag):
+- Poppins: https://fonts.google.com/specimen/Poppins
+- Montserrat: https://fonts.google.com/specimen/Montserrat
+- Space Grotesk: https://fonts.google.com/specimen/Space+Grotesk
+- DM Sans: https://fonts.google.com/specimen/DM+Sans
+*/
+
+/* Font Sizes */
+/*
+Hero Title: 3.5rem (56px)      - Line 373 in style.css
+Hero Subtitle: 1.75rem (28px)  - Line 384 in style.css
+Nav Links: 0.95rem (15.2px)    - Line 190 in style.css
+Body Text: 1.125rem (18px)     - Line 394 in style.css
+*/
+
+/* ===================================
+   SPACING & LAYOUT
+   ===================================
+*/
+
+/*
+--container-max-width: 1200px;   // Maximum content width
+--section-padding: 120px;        // Padding between sections
+*/
+
+/* Adjust for wider/narrower layouts */
+/*
+Wider: 1400px
+Standard: 1200px
+Compact: 1000px
+*/
+
+/* ===================================
+   ANIMATION SPEEDS
+   ===================================
+*/
+
+/*
+--transition-smooth: 0.3s;       // Standard transitions
+--transition-bounce: 0.4s;       // Bouncy transitions
+*/
+
+/* Make animations faster/slower */
+/*
+Fast: 0.2s
+Normal: 0.3s
+Slow: 0.5s
+Very Slow: 0.8s
+*/
+
+/* ===================================
+   PROFILE IMAGE SETTINGS
+   ===================================
+*/
+
+/*
+Size: 400px x 400px (desktop)
+Ring thickness: 8px
+Ring colors: gradient of orange shades
+Rotation speed: 10s (line 542)
+
+To change:
+- Size: .profile-ring { width: 400px; height: 400px; }
+- Ring: padding: 8px;
+- Speed: animation: rotate 10s linear infinite;
+*/
+
+/* ===================================
+   FLOATING BADGES
+   ===================================
+*/
+
+/*
+Current badges:
+1. Data Science (top-left)
+2. Flutter (top-right)
+3. Python (bottom-left)
+4. Machine Learning (bottom-right)
+
+To add more:
+1. Copy badge HTML in index.html (lines 136-152)
+2. Add positioning in style.css (.badge-5, .badge-6, etc.)
+3. Use Font Awesome icons: https://fontawesome.com/search
+*/
+
+/* Badge Position Examples */
+/*
+.badge-5 {
+    top: 50%;
+    left: -10%;
+    animation-delay: 2s;
+}
+
+.badge-6 {
+    top: 50%;
+    right: -10%;
+    animation-delay: 2.5s;
+}
+*/
+
+/* ===================================
+   NAVIGATION MENU ITEMS
+   ===================================
+*/
+
+/*
+Current menu items (line 44-52 in index.html):
+1. About
+2. Skills
+3. Education
+4. Experience
+5. Projects
+6. Research
+7. Contact
+
+To add/remove: Edit <li> items in .nav-menu
+*/
+
+/* ===================================
+   SOCIAL MEDIA LINKS
+   ===================================
+*/
+
+/*
+Current icons:
+- LinkedIn: fab fa-linkedin-in
+- GitHub: fab fa-github
+- Twitter: fab fa-twitter
+- Email: fas fa-envelope
+
+Add more icons:
+- Instagram: fab fa-instagram
+- YouTube: fab fa-youtube
+- Medium: fab fa-medium
+- Dev.to: fab fa-dev
+- Dribbble: fab fa-dribbble
+- Behance: fab fa-behance
+
+Full list: https://fontawesome.com/search?o=r&m=free&f=brands
+*/
+
+/* ===================================
+   BUTTON STYLES
+   ===================================
+*/
+
+/*
+Primary Button (Orange):
+- Background: var(--orange-primary)
+- Text: white
+- Shadow: orange glow
+- Use for: main CTAs
+
+Secondary Button (Outlined):
+- Border: orange
+- Background: transparent
+- Text: white
+- Use for: secondary actions
+*/
+
+/* ===================================
+   RESPONSIVE BREAKPOINTS
+   ===================================
+*/
+
+/*
+Desktop: > 1024px (default)
+Tablet: 768px - 1024px (line 637)
+Mobile: < 768px (line 664)
+Small Mobile: < 480px (line 737)
+
+To adjust breakpoints, edit @media queries in style.css
+*/
+
+/* ===================================
+   GRID OVERLAY
+   ===================================
+*/
+
+/*
+Grid size: 50px x 50px
+Opacity: 0.5
+Color: white (2% opacity)
+
+To adjust:
+.grid-overlay {
+    background-size: 50px 50px;  // Change grid size
+    opacity: 0.5;                // Change visibility
+}
+*/
+
+/* ===================================
+   GLOW EFFECTS
+   ===================================
+*/
+
+/*
+Profile glow:
+- Color: orange
+- Blur: 60px
+- Animation: pulse 3s
+
+To adjust intensity:
+.profile-glow {
+    width: 500px;         // Larger = more spread
+    filter: blur(60px);   // Lower = sharper
+}
+*/
+
+/* ===================================
+   OPTIONAL FEATURES TO ENABLE
+   ===================================
+*/
+
+/*
+1. Typing Effect (script.js line 132):
+   Uncomment to make the name type out letter by letter
+
+2. Cursor Glow (script.js line 169):
+   Uncomment to add a glowing cursor trail effect
+
+3. Parallax Scrolling (already enabled):
+   Hero elements move at different speeds when scrolling
+
+4. More Animation Ideas:
+   - Tilt effect on hover
+   - Particle background
+   - Smooth page transitions
+   - Loading screen
+   - Dark/light mode toggle
+*/
+
+/* ===================================
+   QUICK CUSTOMIZATION CHECKLIST
+   ===================================
+*/
+
+/*
+□ Update name (index.html line 38, 82)
+□ Update title/role (index.html line 87)
+□ Update bio text (index.html line 92-94)
+□ Update profile image (index.html line 130)
+□ Update social links (index.html lines 53-62, 108-120)
+□ Update email address (index.html line 117)
+□ Change tech badges (index.html lines 136-152)
+□ Adjust color scheme (style.css lines 6-14)
+□ Update page title & meta (index.html lines 5-6)
+□ Test on mobile devices
+□ Check all links work
+□ Optimize images
+□ Deploy to hosting
+*/
+
+/* ===================================
+   PERFORMANCE TIPS
+   ===================================
+*/
+
+/*
+1. Image Optimization:
+   - Use WebP format for smaller file sizes
+   - Compress images (TinyPNG, ImageOptim)
+   - Use appropriate dimensions (400x400 for profile)
+   - Consider lazy loading for additional images
+
+2. Font Loading:
+   - Using font-display: swap in Google Fonts
+   - Consider hosting fonts locally for faster load
+
+3. Animation Performance:
+   - Animations use GPU-accelerated properties (transform, opacity)
+   - Reduced motion support included for accessibility
+   - Debounced scroll events to reduce lag
+
+4. Code Optimization:
+   - Minify CSS and JS for production
+   - Combine files to reduce HTTP requests
+   - Use CDN for Font Awesome and fonts
+*/
+
+/* ===================================
+   ADDITIONAL SECTIONS
+   ===================================
+*/
+
+/*
+To add more sections after hero:
+
+<section id="about" class="section">
+    <div class="container">
+        <h2 class="section-title">About Me</h2>
+        <p>Your content here</p>
+    </div>
+</section>
+
+Add corresponding CSS:
+
+.section {
+    padding: var(--section-padding) 0;
+    position: relative;
+    z-index: 2;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+*/
+
+/* ===================================
+   END OF CUSTOMIZATION GUIDE
+   ===================================
+   
+   For detailed instructions, see README.md
+   
+   Questions? Review the code comments in:
+   - index.html
+   - style.css
+   - script.js
+*/
