@@ -42,7 +42,7 @@ document.addEventListener('DOMContentLoaded', function() {
     if (downloadCvBtn) {
         downloadCvBtn.addEventListener('click', function(e) {
             e.preventDefault();
-            alert('cv kicu diner moddhe upload kora hbe .');
+            alert('My CV will be uploaded soon.');
         });
     }
     
@@ -459,19 +459,23 @@ document.addEventListener('DOMContentLoaded', function() {
                     message: formData.get('message')
                 };
 
-                // Simulate submission (in production, send to backend via fetch)
-                // For now, we'll show a success message after 1.5 seconds
-                await new Promise(resolve => setTimeout(resolve, 1500));
+                // Open default mail app with prefilled recipient, subject, and message.
+                const recipientEmail = 'ug2102032@cse.pstu.ac.bd';
+                const subjectText = String(data.subject || 'Portfolio Contact Message');
+                const bodyText = [
+                    `Name: ${String(data.name || '')}`,
+                    `Email: ${String(data.email || '')}`,
+                    '',
+                    'Message:',
+                    String(data.message || '')
+                ].join('\n');
 
-                // Success message
-                contactForm.innerHTML = `
-                    <div style="text-align: center; padding: 2rem; background: rgba(16, 185, 129, 0.1); border: 1px solid rgba(16, 185, 129, 0.3); border-radius: 16px;">
-                        <i style="font-size: 3rem; color: #10B981; display: block; margin-bottom: 1rem;" class="fas fa-check-circle"></i>
-                        <h3 style="color: var(--text-primary); font-size: 1.5rem; margin-bottom: 0.5rem;">Message Sent Successfully!</h3>
-                        <p style="color: var(--text-secondary); margin-bottom: 1.5rem;">Thank you for reaching out. I'll get back to you soon!</p>
-                        <button type="button" onclick="location.reload()" style="padding: 0.75rem 2rem; background: var(--orange-primary); color: var(--text-primary); border: none; border-radius: 12px; font-weight: 600; cursor: pointer;">Send Another Message</button>
-                    </div>
-                `;
+                const mailtoLink = `mailto:${recipientEmail}?subject=${encodeURIComponent(subjectText)}&body=${encodeURIComponent(bodyText)}`;
+                window.location.href = mailtoLink;
+
+                contactForm.reset();
+                formInputs.button.innerHTML = originalText;
+                formInputs.button.disabled = false;
             } catch (error) {
                 console.error('Form submission error:', error);
                 formInputs.button.innerHTML = originalText;
