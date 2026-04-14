@@ -36,6 +36,15 @@ document.addEventListener('DOMContentLoaded', function() {
             localStorage.setItem('portfolioTheme', nextTheme);
         });
     }
+
+    // CV download is not available yet, so show a notice on click.
+    const downloadCvBtn = document.getElementById('downloadCvBtn');
+    if (downloadCvBtn) {
+        downloadCvBtn.addEventListener('click', function(e) {
+            e.preventDefault();
+            alert('cv kicu diner moddhe upload kora hbe .');
+        });
+    }
     
     // ===================================
     // Mobile Menu Toggle
