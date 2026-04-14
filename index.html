@@ -17,93 +17,123 @@
     <!-- Custom CSS -->
     <link rel="stylesheet" href="style.css">
 </head>
+<body>
     <!-- Grid Background Overlay -->
     <div class="grid-overlay"></div>
-                <span class="section-label">MY EXPERTISE</span>
-                <h2 class="section-title">
-                    Skills & <span class="highlight">Technologies</span>
-                </h2>
-                <p>
-                    Focused on building real-world systems using AI, mobile apps, IoT, and modern web technologies.
-                </p>
+
+    <!-- Header/Navigation -->
+    <header class="header" id="header">
+        <div class="container">
+            <nav class="navbar">
+                <!-- Logo -->
+                <a href="#" class="logo">
+                    <span class="logo-first">Ariful Islam</span><span class="logo-last"> </span>
                 </a>
 
-            <!-- AI & Machine Learning -->
-            <div class="skills-category">
-                <h3>AI & Machine Learning</h3>
-                <div class="skills-tags">
-                    <span class="skill-tag">Python</span>
-                    <span class="skill-tag">Machine Learning</span>
-                    <span class="skill-tag">Deep Learning (Learning)</span>
-                    <span class="skill-tag">Data Analysis</span>
-                    <span class="skill-tag">Pandas</span>
-                    <span class="skill-tag">NumPy</span>
-                    <span class="skill-tag">Scikit-learn</span>
-                </div>
-            </div>
+                <!-- Desktop Navigation -->
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="#about" class="nav-link">About</a></li>
+                    <li><a href="#skills" class="nav-link">Skills</a></li>
+                    <li><a href="#education" class="nav-link">Education</a></li>
+                    <li><a href="#experience" class="nav-link">Experience</a></li>
+                    <li><a href="#projects" class="nav-link">Projects</a></li>
+                    <!-- <li><a href="#research" class="nav-link">Research</a></li> -->
+                    <li><a href="#contact" class="nav-link">Contact</a></li>
+                </ul>
 
-            <!-- Mobile Development -->
-            <div class="skills-category">
-                <h3>Mobile App Development</h3>
-                <div class="skills-tags">
-                    <span class="skill-tag">Flutter</span>
-                    <span class="skill-tag">Dart</span>
-                    <span class="skill-tag">Firebase</span>
-                    <span class="skill-tag">REST API</span>
-                    <span class="skill-tag">State Management</span>
-                    <span class="skill-tag">UI Design</span>
+                <!-- Right Section: Social Icons + CTA -->
+                <div class="nav-right">
+                    <div class="social-icons">
+                        <a href="https://linkedin.com/in/ariful-islam-masum-301465318" target="_blank" aria-label="LinkedIn" class="social-icon">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="https://github.com/ariful10159" target="_blank" aria-label="GitHub" class="social-icon">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="https://twitter.com" target="_blank" aria-label="Twitter" class="social-icon">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                    </div>
+                    <button class="theme-toggle" id="themeToggle" aria-label="Switch to light mode" title="Switch to light mode">
+                        <i class="fas fa-moon" id="themeIcon"></i>
+                    </button>
+                    <a href="#contact" class="btn btn-primary">Get in Touch</a>
                 </div>
-            </div>
 
-            <!-- IoT & Embedded -->
-            <div class="skills-category">
-                <h3>IoT & Embedded Systems</h3>
-                <div class="skills-tags">
-                    <span class="skill-tag">Arduino</span>
-                    <span class="skill-tag">Raspberry Pi</span>
-                    <span class="skill-tag">Sensors Integration</span>
-                    <span class="skill-tag">Embedded Systems</span>
-                    <span class="skill-tag">Automation Systems</span>
-                </div>
-            </div>
+                <!-- Mobile Hamburger -->
+                <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </nav>
+        </div>
+    </header>
 
-            <!-- Web Development -->
-            <div class="skills-category">
-                <h3>Web Development</h3>
-                <div class="skills-tags">
-                    <span class="skill-tag">HTML5</span>
-                    <span class="skill-tag">CSS3</span>
-                    <span class="skill-tag">JavaScript</span>
-                    <span class="skill-tag">PHP</span>
-                    <span class="skill-tag">Node.js</span>
-                    <span class="skill-tag">MySQL</span>
-                    <span class="skill-tag">MongoDB</span>
-                    <span class="skill-tag">PostgreSQL</span>
-                    <span class="skill-tag">REST API</span>
-                </div>
-            </div>
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <div class="container">
+            <div class="hero-grid">
+                <!-- Left Column: Content -->
+                <div class="hero-content">
+                    <!-- Badge -->
+                    <div class="badge-pill">
+                        <span class="badge-dot"></span>
+                        Open to Opportunities
+                    </div>
 
-            <!-- UI/UX & Creative Tools -->
-            <div class="skills-category">
-                <h3>UI/UX & Creative Tools</h3>
-                <div class="skills-tags">
-                    <span class="skill-tag">Figma</span>
-                    <span class="skill-tag">Adobe Illustrator</span>
-                    <span class="skill-tag">Photography</span>
-                </div>
-            </div>
+                    <!-- Main Headline -->
+                    <h1 class="hero-title">
+                        Hi, I'm <span class="highlight">Ariful Islam Masum</span>
+                    </h1>
 
-            <!-- Tools & Platforms -->
-            <div class="skills-category">
-                <h3>Tools & Platforms</h3>
-                <div class="skills-tags">
-                    <span class="skill-tag">Git</span>
-                    <span class="skill-tag">GitHub</span>
-                    <span class="skill-tag">VS Code</span>
-                    <span class="skill-tag">Linux</span>
-                    <span class="skill-tag">XAMPP</span>
-                    <span class="skill-tag">Jupyter Notebook</span>
+                    <!-- Subheadline -->
+                    <h2 class="hero-subtitle">
+                        Data Science Enthusiast & Flutter Developer
+                    </h2>
+
+                    <!-- Short Bio -->
+                    <p class="hero-description">
+                        Passionate about leveraging data to drive insights and building beautiful, 
+                        cross-platform mobile applications. Always eager to learn and tackle new challenges.
+                    </p>
+
+                    <!-- CTA Buttons -->
+                    <div class="hero-actions">
+                        <a href="#projects" class="btn btn-secondary">
+                            View My Work
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                        <a href="assets/main.pdf" class="btn btn-primary" download id="downloadCvBtn">
+                            <i class="fas fa-download"></i>
+                            Download CV
+                        </a>
+                    </div>
+
+                    <!-- Social Icons Row -->
+                    <div class="hero-social">
+                        <a href="https://www.linkedin.com/in/imamul-kabir-anan-997b90289" target="_blank" aria-label="LinkedIn" class="hero-social-link">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="https://github.com/imamulanan" target="_blank" aria-label="GitHub" class="hero-social-link">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="mailto:anan.imamul@gmail.com" aria-label="Email" class="hero-social-link">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                    </div>
                 </div>
+
+                <!-- Right Column: Profile Image -->
+                <div class="hero-image">
+                    <div class="profile-wrapper">
+                        <!-- Radial Glow Background -->
+                        <div class="profile-glow"></div>
+                        
+                        <!-- Profile Image with Ring -->
+                        <div class="profile-ring">
+                            <img src="assets/own.jpg" alt="Imamul Kabir Anan" class="profile-img">
+                        </div>
 
                         <!-- Floating Tech Badges -->
                         <div class="floating-badge badge-1">
@@ -285,17 +315,17 @@
                         <div class="skill-icon purple-icon">
                             <i class="fas fa-project-diagram"></i>
                         </div>
-                        <h3 class="skill-title">Deep Learning</h3>
+                        <h3 class="skill-title">Mobile App Development</h3>
                     </div>
                     <div class="skill-tags">
-                        <span class="skill-tag">Deep Learning</span>
-                        <span class="skill-tag">CNN</span>
-                        <span class="skill-tag">RNN</span>
-                        <span class="skill-tag">LSTM</span>
-                        <span class="skill-tag">GRU</span>
-                        <span class="skill-tag">Neural Networks</span>
-                        <span class="skill-tag">TensorFlow / PyTorch</span>
-                        <span class="skill-tag">Model Evaluation</span>
+                        <span class="skill-tag">Flutter</span>
+                        <span class="skill-tag">Dart</span>
+                        <span class="skill-tag">Firebase</span>
+                        <span class="skill-tag">Firebase</span>
+                        <span class="skill-tag">Firestore</span>
+                        <span class="skill-tag">REST API</span>
+                        <span class="skill-tag">State Management</span>
+                        <span class="skill-tag">UI Design</span>
                     </div>
                 </div>
 
@@ -306,15 +336,14 @@
                         <div class="skill-icon blue-icon">
                             <i class="fas fa-mobile-alt"></i>
                         </div>
-                        <h3 class="skill-title">Mobile App Development</h3>
+                        <h3 class="skill-title">IoT & Embedded Systems</h3>
                     </div>
                     <div class="skill-tags">
-                        <span class="skill-tag">Flutter</span>
-                        <span class="skill-tag">Dart</span>
-                        <span class="skill-tag">Cross-Platform App Development</span>
-                        <span class="skill-tag">Responsive UI Design</span>
-                        <span class="skill-tag">Firebase Integration</span>
-                        <span class="skill-tag">State Management</span>
+                        <span class="skill-tag">Arduino</span>
+                        <span class="skill-tag">Raspberry Pi</span>
+                        <span class="skill-tag">Sensor Integration</span>
+                        <span class="skill-tag">Embedded System</span>
+                        <span class="skill-tag">Automation Systems</span>                     
                     </div>
                 </div>
 
@@ -356,6 +385,22 @@
                         <span class="skill-tag">Jupyter Notebook</span>
                         <span class="skill-tag">XAMPP</span>
                         <span class="skill-tag">Linux</span>
+                    </div>
+                </div>
+
+                <div class="skill-card" data-color="orange">
+                    <div class="card-decoration"></div>
+                    <div class="skill-header">
+                        <div class="skill-icon orange-icon">
+                            <i class="fas fa-tools"></i>
+                        </div>
+                        <h3 class="skill-title">UI/UX & Creative Tools</h3>
+                    </div>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Figma</span>
+                        <span class="skill-tag">Adobe Illustrator</span>                       
+                        <span class="skill-tag">Photoshop</span>
+                        
                     </div>
                 </div>
             </div>
