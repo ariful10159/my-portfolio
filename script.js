@@ -48,7 +48,7 @@ document.addEventListener('DOMContentLoaded', function() {
             heroTitle: 'Hi, I\'m <span class="highlight">Ariful Islam Masum</span>',
             heroSubtitle: 'Data Science Enthusiast & Flutter Developer',
             heroDescription: 'Passionate about leveraging data to drive insights and building beautiful, cross-platform mobile applications. Always eager to learn and tackle new challenges.',
-            heroButtons: ['View My Work', 'CV Coming Soon'],
+            heroButtons: ['View My Work', 'Download CV'],
             scrollText: 'Scroll to explore',
             aboutLabel: 'ABOUT ME',
             aboutTitle: 'Building Intelligent & Practical <span class="highlight">Digital Solutions</span>',
@@ -132,7 +132,7 @@ document.addEventListener('DOMContentLoaded', function() {
             footerConnect: 'Connect',
             footerLinks: ['About', 'Skills', 'Projects', 'Education', 'Contact'],
             footerCredit: 'Built with <i class="fas fa-heart"></i> in Bangladesh',
-            cvNotice: 'My CV will be uploaded soon.',
+            cvNotice: 'Downloading CV...',
             validationErrors: {
                 nameRequired: 'Name is required',
                 nameMin: 'Name must be at least 2 characters',
@@ -158,7 +158,7 @@ document.addEventListener('DOMContentLoaded', function() {
             heroTitle: 'হ্যালো, আমি <span class="highlight">আরিফুল ইসলাম মাসুম</span>',
             heroSubtitle: 'ডেটা সায়েন্স এনথুসিয়াস্ট ও ফ্লাটার ডেভেলপার',
             heroDescription: 'ডেটা থেকে ইনসাইট বের করা এবং সুন্দর ক্রস-প্ল্যাটফর্ম মোবাইল অ্যাপ তৈরি করতে আমি আগ্রহী। নতুন কিছু শেখা এবং চ্যালেঞ্জ নেওয়া আমার পছন্দ।',
-            heroButtons: ['আমার কাজ দেখুন', 'সিভি শীঘ্রই আসছে'],
+            heroButtons: ['আমার কাজ দেখুন', 'সিভি ডাউনলোড করুন'],
             scrollText: 'আরও দেখতে স্ক্রল করুন',
             aboutLabel: 'আমার সম্পর্কে',
             aboutTitle: 'ইন্টেলিজেন্ট ও প্র্যাকটিক্যাল <span class="highlight">ডিজিটাল সমাধান</span> তৈরি করি',
@@ -242,7 +242,7 @@ document.addEventListener('DOMContentLoaded', function() {
             footerConnect: 'সংযুক্ত থাকুন',
             footerLinks: ['আমার সম্পর্কে', 'স্কিলস', 'প্রজেক্টস', 'শিক্ষা', 'যোগাযোগ'],
             footerCredit: 'বাংলাদেশে <i class="fas fa-heart"></i> দিয়ে তৈরি',
-            cvNotice: 'আমার সিভি শীঘ্রই আপলোড করা হবে।',
+            cvNotice: 'সিভি ডাউনলোড হচ্ছে...',
             validationErrors: {
                 nameRequired: 'নাম দেওয়া প্রয়োজন',
                 nameMin: 'নাম অন্তত ২ অক্ষরের হতে হবে',
@@ -400,12 +400,18 @@ document.addEventListener('DOMContentLoaded', function() {
 
     applyLanguage(currentLanguage);
 
-    // CV download is not available yet, so show a notice on click.
+    // Download CV file from the assets folder.
     const downloadCvBtn = document.getElementById('downloadCvBtn');
     if (downloadCvBtn) {
         downloadCvBtn.addEventListener('click', function(e) {
             e.preventDefault();
-            alert(languagePack[currentLanguage].cvNotice);
+
+            const link = document.createElement('a');
+            link.href = 'assets/cv.pdf';
+            link.download = 'cv.pdf';
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
         });
     }
     
