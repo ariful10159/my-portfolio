@@ -400,21 +400,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
     applyLanguage(currentLanguage);
 
-    // Download CV file from the assets folder.
-    const downloadCvBtn = document.getElementById('downloadCvBtn');
-    if (downloadCvBtn) {
-        downloadCvBtn.addEventListener('click', function(e) {
-            e.preventDefault();
-
-            const link = document.createElement('a');
-            link.href = 'assets/cv.pdf';
-            link.download = 'cv.pdf';
-            document.body.appendChild(link);
-            link.click();
-            document.body.removeChild(link);
-        });
-    }
-    
     // ===================================
     // Mobile Menu Toggle
     // ===================================
